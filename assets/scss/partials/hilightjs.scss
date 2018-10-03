@@ -1,0 +1,47 @@
+.hljs-comment,
+.hljs-quote {
+    color: var(--code-comment)
+}
+
+.hljs-meta,
+.hljs-name,
+.hljs-regexp,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-tag,
+.hljs-template-variable,
+.hljs-variable {
+    color: var(--code)
+}
+
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-deletion,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-params,
+.hljs-type {
+    color: var(--yellow1)
+}
+
+.hljs-addition,
+.hljs-bullet,
+.hljs-string,
+.hljs-symbol {
+    color: var(--green1)
+}
+
+.hljs-function,
+.hljs-keyword,
+.hljs-selector-tag {
+    color: var(--green2)
+}
+
+.hljs,
+.nohighlight {
+    display: block;
+    overflow-x: auto;
+    color: var(--code-text);
+    padding: .9em .5em
+}
