@@ -99,6 +99,10 @@
   --info-box-bg: #eee8d5;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background: var(--bg);
   color: var(--text-color);
@@ -112,8 +116,9 @@ body {
 }
 
 #wrapper {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 55rem;
+  margin: 0 auto;
+  padding: 0 .9rem;
 }
 
 input[type=text],
@@ -227,6 +232,12 @@ pre {
 
 code {
   font-size: 1.2rem;
+}
+
+@media (max-width: 40em) {
+  code {
+    font-size: 1em;
+  }
 }
 
 .mt-10 {
@@ -619,9 +630,9 @@ input.algolia__input:focus {
 .hljs,
 .nohighlight {
   display: block;
-  overflow-x: auto;
+  /*overflow-x: auto;*/
   color: var(--code-text);
-  padding: .9em .5em;
+  /*padding: .9em .5em*/
 }
 
 .language-css .token.string,
@@ -649,11 +660,12 @@ pre[class*=language-] {
   hyphens: none;
 }
 
-pre[class*=language-] {
+/*pre[class*=language-] {
   padding: 1em;
   margin: 1.5em 0;
-  overflow: auto;
+  overflow: auto
 }
+*/
 
 :not(pre) > code[class*=language-],
 pre[class*=language-] {

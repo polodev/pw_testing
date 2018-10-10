@@ -98,3 +98,7 @@
     --front-text-color: #93a791;
     --info-box-bg: #eee8d5;
 }
+
+$mobile: "(max-width: 40em)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";

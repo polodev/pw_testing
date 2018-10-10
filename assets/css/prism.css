@@ -16,12 +16,12 @@ pre[class*=language-] {
   hyphens: none
 }
 
-pre[class*=language-] {
+/*pre[class*=language-] {
   padding: 1em;
   margin: 1.5em 0;
   overflow: auto
 }
-
+*/
 :not(pre)>code[class*=language-],
 pre[class*=language-] {
   background: var(--bg3)

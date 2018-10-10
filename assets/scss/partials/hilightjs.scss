@@ -42,9 +42,9 @@
 .hljs,
 .nohighlight {
     display: block;
-    overflow-x: auto;
+    /*overflow-x: auto;*/
     color: var(--code-text);
-    padding: .9em .5em
+    /*padding: .9em .5em*/
 }
 
 .language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
