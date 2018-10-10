@@ -58,9 +58,14 @@ input.algolia__input {
   border-color: var(--subtle);
   color: #fff;
   padding-bottom: .4em;
-  padding-top: .4em; 
+  padding-top: .4em;
 }
 
 input.algolia__input:focus {
     width: 180px
+}
+a,
+a:link {
+    transition: all .2s;
+    color: var(--yellow2)
 }

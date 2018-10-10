@@ -3,22 +3,79 @@
   nav {
     background: linear-gradient(to right, var(--top1), var(--top2));
     height: 3.75em;
-    overflow: hidden;
+    /*overflow: hidden;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     a#logo {
-
-
+      margin-left: 20px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 24px;
     }
 
-    div#nav-menu {
-      position: relative;
-      ul {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        background: var(--top2);
+    #search-and-menu {
+      display: grid;
+      grid-template-columns: auto 30px;
+      grid-gap: 20px;
+      a#burger {
+        color: #fff;
+        font-size: 24px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul.nav-menu {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--top2);
+      li {
+        text-align: center;
+        &.has-dropdown {
+          >a {
+            /*border-bottom: 2px solid var(--yellow1);*/
+          }
+        }
+        a {
+          display: block;
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            background: var(--yellow1);
+          }
+        }
+        ul.dropdown {
+          display: inline-block;
+          margin-left: 43px;
+          border-left: 2px solid var(--yellow1);
+          li {
+            text-align: left;
+            position: relative;
+            padding-left: 10px;
+            &:before {
+              position: absolute;
+              content: '';
+              height: 2px;
+              width: 10px;
+              top: 50%;
+              left: 0;
+              background: var(--yellow1);
+            }
+          }
+          a {
+
+          }
+        }
       }
     }
 
