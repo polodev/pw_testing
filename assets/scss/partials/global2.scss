@@ -1,0 +1,66 @@
+// generic margin padding
+@for $i from 1 to 7 {
+  .mt-#{$i*10} {
+    margin-top: #{$i * 10}px;
+  }
+  .mb-#{$i*10} {
+    margin-bottom: #{$i*10}px;
+  }
+  .ml-#{$i*10} {
+    margin-left: #{$i*10}px;
+  }
+  .mr-#{$i*10} {
+    margin-right: #{$i*10}px;
+  }
+  .pt-#{$i*10} {
+    margin-top: #{$i*10}px;
+  }
+  .pb-#{$i*10} {
+    padding-bottom: #{$i*10}px;
+  }
+  .pl-#{$i*10} {
+    padding-left: #{$i*10}px;
+  }
+  .pr-#{$i*10} {
+    padding-right: #{$i*10}px;
+  }
+}
+
+
+.text-center {
+  text-align: center;
+}
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-grid {
+  display: grid;
+}
+.d-inline-block {
+  display: inline-block;
+}
+
+input.algolia__input,
+input.bottom-subscribe {
+  border-radius: 8px;
+  font-size: 17px
+}
+
+input.algolia__input {
+  background: url("https://d33wubrfki0l68.cloudfront.net/e10fdd9ca1b84917cc85418bf37c4cd923847ae7/f6e7b/assets/img/search.svg") 7px 50%/1em 1em no-repeat rgba(0, 0, 0, 0.1);
+  background: url("https://d33wubrfki0l68.cloudfront.net/e10fdd9ca1b84917cc85418bf37c4cd923847ae7/f6e7b/assets/img/search.svg") 7px 50%/1em 1em no-repeat var(--subtle);
+  transition: all .2s ease-out;
+  width: 140px;
+  padding-left: 1.8em;
+  border-color: var(--subtle);
+  color: #fff;
+  padding-bottom: .4em;
+  padding-top: .4em; 
+}
+
+input.algolia__input:focus {
+    width: 180px
+}

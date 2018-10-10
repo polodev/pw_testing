@@ -10,24 +10,27 @@
     <div id="wrapper">
       <div id="navigation">
         <nav>
-          <a id="logo" href="#">Logo Text</a>
-          <ul id="nav-menu">
-            <li class="has-dropdown"> <a href="#">Course</a>
+          <div id="logo-menu">
+            <a id="logo" href="#">Logo Text</a>
+            <div id="nav-menu">
               <ul>
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">Css</a></li>
-                <li><a href="#">Javascript</a></li>
-                <li><a href="#">Jquery</a></li>
-                <li><a href="#">PHP</a></li>
+                <li class="has-dropdown"> <a href="#">Course</a>
+                  <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">Css</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Jquery</a></li>
+                    <li><a href="#">PHP</a></li>
+                  </ul>
+                </li>
+                <li> <a href="#">Series</a> </li>
+                <li> <a href="#">Tutorials</a> </li>
+                <li> <a href="#">Bits</a> </li>
               </ul>
-            </li>
-            <li> <a href="#">Series</a> </li>
-            <li> <a href="#">Tutorials</a> </li>
-            <li> <a href="#">Bits</a> </li>
-          </ul>
-          <form class="d-none" id="search-form" action="#">
-            <input type="text" name="search">
-            <button type="submit">Search</button>
+            </div> <!-- end navmenu -->
+          </div> <!-- end logo-menu -->
+          <form id="search-form" action="#">
+            <input class='algolia__input' type="text" name="search">
           </form>
         </nav>
       </div>

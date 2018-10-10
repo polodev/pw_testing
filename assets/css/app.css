@@ -99,6 +99,60 @@
   --info-box-bg: #eee8d5;
 }
 
+body {
+  background: var(--bg);
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  font-weight: 300;
+  -webkit-transition: background-color .25s ease-out;
+  transition: background-color .25s ease-out;
+}
+
+input[type=text],
+input[type=email],
+input[type=search],
+textarea {
+  -webkit-appearance: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--gs1);
+  -webkit-box-shadow: inset 0 1px 2px var(--subtle);
+          box-shadow: inset 0 1px 2px var(--subtle);
+  display: block;
+  padding: .5rem;
+  width: 100%;
+  -webkit-transition: border-color .45s ease-in-out, -webkit-box-shadow .45s;
+  transition: border-color .45s ease-in-out, -webkit-box-shadow .45s;
+  transition: box-shadow .45s, border-color .45s ease-in-out;
+  transition: box-shadow .45s, border-color .45s ease-in-out, -webkit-box-shadow .45s;
+  background: var(--bg3);
+  color: var(--text-color);
+}
+
+input[type=email]:focus,
+input[type=search]:focus,
+input[type=text]:focus {
+  -webkit-box-shadow: 0 0 5px var(--subtle);
+          box-shadow: 0 0 5px var(--subtle);
+  border-color: var(--subtle);
+  outline: 0;
+}
+
+input[type=text].topbar {
+  background: url(/images/search.svg?243f9487090f76548ff26a101060c5b1) 7px 50%/1em 1em no-repeat var(--subtle);
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  width: 140px;
+  padding-left: 1.8em;
+  border-color: var(--subtle);
+  color: #fff;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
 .mt-10 {
   margin-top: 10px;
 }
@@ -311,46 +365,43 @@
   display: inline-block;
 }
 
-body {
-  background: var(--bg);
-  color: var(--text-color);
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  line-height: 1.6;
-  font-weight: 300;
-  -webkit-transition: background-color .25s ease-out;
-  transition: background-color .25s ease-out;
+input.algolia__input,
+input.bottom-subscribe {
+  border-radius: 8px;
+  font-size: 17px;
 }
 
-input[type=text],
-input[type=email],
-input[type=search],
-textarea {
-  -webkit-appearance: none;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--gs1);
-  -webkit-box-shadow: inset 0 1px 2px var(--subtle);
-          box-shadow: inset 0 1px 2px var(--subtle);
-  display: block;
-  padding: .5rem;
-  width: 100%;
-  -webkit-transition: border-color .45s ease-in-out, -webkit-box-shadow .45s;
-  transition: border-color .45s ease-in-out, -webkit-box-shadow .45s;
-  transition: box-shadow .45s, border-color .45s ease-in-out;
-  transition: box-shadow .45s, border-color .45s ease-in-out, -webkit-box-shadow .45s;
-  background: var(--bg3);
-  color: var(--text-color);
-}
-
-input[type=email]:focus,
-input[type=search]:focus,
-input[type=text]:focus {
-  -webkit-box-shadow: 0 0 5px var(--subtle);
-          box-shadow: 0 0 5px var(--subtle);
+input.algolia__input {
+  background: url("https://d33wubrfki0l68.cloudfront.net/e10fdd9ca1b84917cc85418bf37c4cd923847ae7/f6e7b/assets/img/search.svg") 7px 50%/1em 1em no-repeat rgba(0, 0, 0, 0.1);
+  background: url("https://d33wubrfki0l68.cloudfront.net/e10fdd9ca1b84917cc85418bf37c4cd923847ae7/f6e7b/assets/img/search.svg") 7px 50%/1em 1em no-repeat var(--subtle);
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  width: 140px;
+  padding-left: 1.8em;
   border-color: var(--subtle);
-  outline: 0;
+  color: #fff;
+  padding-bottom: .4em;
+  padding-top: .4em;
+}
+
+input.algolia__input:focus {
+  width: 180px;
+}
+
+.file-desc {
+  color: var(--pale-text);
+  text-align: right;
+  margin-bottom: .5em;
+  font-size: 1.1em;
+}
+
+.file-desc span {
+  border-bottom: 2px solid var(--gs0);
+}
+
+.file-desc::before {
+  content: "\2193   \A0";
+  color: rgba(239, 187, 53, 0.6);
 }
 
 #navigation {
@@ -363,6 +414,26 @@ input[type=text]:focus {
   background: linear-gradient(to right, var(--top1), var(--top2));
   height: 3.75em;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navigation nav div#nav-menu {
+  position: relative;
+}
+
+#navigation nav div#nav-menu ul {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: var(--top2);
 }
 
 .hljs-comment,

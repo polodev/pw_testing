@@ -4,16 +4,26 @@
     background: linear-gradient(to right, var(--top1), var(--top2));
     height: 3.75em;
     overflow: hidden;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     a#logo {
+
 
     }
 
-    ul#nav-menu {
-      
+    div#nav-menu {
+      position: relative;
+      ul {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: var(--top2);
+      }
     }
 
     form#search-form {
+
     }
   }
 }
