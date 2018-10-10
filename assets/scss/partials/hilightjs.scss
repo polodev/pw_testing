@@ -1,3 +1,4 @@
+// forked from aligator
 .hljs-comment,
 .hljs-quote {
     color: var(--code-comment)
@@ -44,4 +45,8 @@
     overflow-x: auto;
     color: var(--code-text);
     padding: .9em .5em
+}
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
+  background: transparent;
 }

@@ -1,57 +1,305 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/app.css">
-  </head>
-  <body>
-    <div id="wrapper">
-      <div id="navigation">
-        <nav>
-          <a id="logo" href="#">Polo Dev</a>
-          <div id="search-and-menu">
-            <form id="search-form" action="#">
-              <input class='algolia__input' type="text" name="search">
-            </form>
-            <div>
-              <a id="burger" href="javascript:void(0)"><i class="fa fa-bars"></i>
-              </a>
-              <ul class="nav-menu d-none">
-                <li class="has-dropdown"> <a href="#">Course</a>
-                  <ul class="dropdown">
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">Css</a></li>
-                    <li><a href="#">Javascript</a></li>
-                    <li><a href="#">Jquery</a></li>
-                    <li><a href="#">PHP</a></li>
-                  </ul>
-                </li>
-                <li> <a href="#">Series</a> </li>
-                <li> <a href="#">Tutorials</a> </li>
-                <li> <a href="#">Bits</a> </li>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/highlightjs.min.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+
+<body class="solarized">
+
+  <div id="navigation">
+    <nav>
+      <a id="logo" href="#">Polo Dev</a>
+      <div id="search-and-menu">
+        <form id="search-form" action="#">
+          <input class='algolia__input' type="text" name="search">
+        </form>
+        <div>
+          <a id="burger" href="javascript:void(0)"><i class="fa fa-bars"></i>
+          </a>
+          <ul class="nav-menu d-none">
+            <li class="has-dropdown"> <a href="#">Course</a>
+              <ul class="dropdown">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">Css</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">Jquery</a></li>
+                <li><a href="#">PHP</a></li>
               </ul>
-            </div> <!-- end navmenu -->
-          </div>
-        </nav>
+            </li>
+            <li> <a href="#">Series</a> </li>
+            <li> <a href="#">Tutorials</a> </li>
+            <li> <a href="#">Bits</a> </li>
+          </ul>
+        </div> <!-- end navmenu -->
       </div>
+    </nav>
+  </div>
+  <div id="wrapper">
+    <main>
+      <h1>This is the main content h1 header</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto neque fugiat voluptatem rerum quaerat ea
+        reiciendis ut nobis quibusdam, quam perferendis aspernatur sunt commodi, vel non odit sit nemo illo.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos reprehenderit at in vel, maiores officia
+        eligendi rem alias quo a.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, culpa.</p>
+      <h2>This is another content box</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio rem quod deserunt molestias aspernatur
+        magni illo optio ab impedit fugiat! Sunt molestiae optio sit nam. Esse est maiores aut dolorem?</p>
+    </main>
 
-      <main>
-        <h1>This is the main content h1 header</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto neque fugiat voluptatem rerum quaerat ea reiciendis ut nobis quibusdam, quam perferendis aspernatur sunt commodi, vel non odit sit nemo illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos reprehenderit at in vel, maiores officia eligendi rem alias quo a.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, culpa.</p>
-        <h2>This is another content box</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio rem quod deserunt molestias aspernatur magni illo optio ab impedit fugiat! Sunt molestiae optio sit nam. Esse est maiores aut dolorem?</p>
-      </main>
+    <main>
+      <div class="row t50">
+        <article itemscope="" itemtype="http://schema.org/Article">
+          <header>
+            <h1>Styling Components with React Fela</h1><span class="author" aria-label="author"><a href="/author/joshtronic">joshtronic</a></span>
+          </header>
+          <div itemprop="articleSection">
+            <p>Styling in React comes in all shapes and sizes. Out of the box, you can assign classes via the <code
+                class="highlighter-rouge">className</code> property or assign CSS properties by passing an object to
+              the <code class="highlighter-rouge">style</code> property. While sufficient enough in most scenarios,
+              they are not without their shortcomings. Making <code class="highlighter-rouge">classNames</code> dynamic
+              requires defining additional classes, and <code class="highlighter-rouge">styles</code>, while allowing
+              dynamic properties, still requires boilerplate code and doesn’t allow you dig deep into pseudo-class
+              properties like <code class="highlighter-rouge">:hover</code>. That’s where Fela can come to your rescue!</p>
+            <p><a href="http://fela.js.org/">Fela</a> is a framework-agnostic library for handling state-driven styling
+              in JavaScript. It’s highly performant and gives you some flexibility in regard to how you use it. While
+              you can use Fela by itself, <a href="https://github.com/rofrischmann/fela/tree/master/packages/react-fela">react-fela</a>
+              is available to provide React bindings for your React.js apps.</p>
+            <h2 id="getting-started"><a class="anchorjs-link " href="#getting-started" aria-label="Anchor"
+                data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Getting
+              Started</h2>
+            <p>To get started, we need to add <code class="highlighter-rouge">react-fela</code> to our project:</p>
+            <h3 id="via-npm">Via npm</h3>
+            <div class="language-shell highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight language-shell"><code class=" language-shell">$ <span class="token function">npm</span> <span class="token function">install</span> --save react-fela
+</code></pre>
+              </div>
+            </div>
+            <h3 id="or-via-yarn">Or via Yarn</h3>
+            <div class="language-shell highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight language-shell"><code class=" language-shell">$ yarn add react-fela
+</code></pre>
+              </div>
+            </div>
+            <p>For this article we will be using some methods from the <code class="highlighter-rouge">fela</code>
+              library directly. Don’t worry though, <code class="highlighter-rouge">react-fela</code> includes this
+              dependency so we should be good to go.</p>
+            <h2 id="the-renderer"><a class="anchorjs-link " href="#the-renderer" aria-label="Anchor" data-anchorjs-icon=""
+                style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>The
+              Renderer</h2>
+            <p>As promised, there is a part of the <code class="highlighter-rouge">fela</code> library that we will
+              need to use, that’s <code class="highlighter-rouge">createRenderer</code>. The <code class="highlighter-rouge">createRenderer</code>
+              method is used to create a renderer that will be passed a <code class="highlighter-rouge">Provider</code>
+              component that will wrap out components that are leveraging Fela.</p>
+            <p>All of the following examples will include the boilerplate code that we need to make the magic happen.</p>
+            <h2 id="using-generated-css-classes"><a class="anchorjs-link " href="#using-generated-css-classes"
+                aria-label="Anchor" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Using
+              Generated CSS Classes</h2>
+            <p>The least complex Fela example isn’t ideal but does have the least amount of boilerplate code.</p>
+            <p>The way Fela works is that it takes your styles, generates the appropriate CSS with atomic classes and
+              allows you to grab the CSS classes that can be passed to any component’s <code class="highlighter-rouge">classNames</code>
+              property:</p>
+            <div class="language-jsx highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight language-jsx"><code class=" language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> render <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-dom"</span><span class="token punctuation">;</span>
 
-      <footer>
-        <p>All rights reserved</p>
-      </footer>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createRenderer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"fela"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Provider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-fela"</span><span class="token punctuation">;</span>
 
-    </div>
-      <!-- <script src="assets/js/jquery-3.3.1.min.js"></script> -->
-      <script src="assets/js/app.js"></script>
-  </body>
+<span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token function">createRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> rule <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  backgroundColor <span class="token operator">=</span> <span class="token string">"#6db65b"</span><span class="token punctuation">,</span>
+  borderColor <span class="token operator">=</span> <span class="token string">"#efbb35"</span><span class="token punctuation">,</span>
+  padding
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  backgroundColor<span class="token punctuation">:</span> backgroundColor<span class="token punctuation">,</span>
+  border<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`10px solid </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>borderColor<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
+  color<span class="token punctuation">:</span> <span class="token string">"#fff"</span><span class="token punctuation">,</span>
+  fontWeight<span class="token punctuation">:</span> <span class="token string">"bold"</span><span class="token punctuation">,</span>
+  padding<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>padding<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px`</span></span><span class="token punctuation">,</span>
+  <span class="token string">":hover"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    cursor<span class="token punctuation">:</span> <span class="token string">"pointer"</span><span class="token punctuation">,</span>
+    filter<span class="token punctuation">:</span> <span class="token string">"drop-shadow(0 10px 19px rgba(0, 0, 0, 0.3))"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>container<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Provider</span></span> <span class="token attr-name">renderer</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>renderer<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>renderer<span class="token punctuation">.</span><span class="token function">renderRule</span><span class="token punctuation">(</span>rule<span class="token punctuation">,</span> <span class="token punctuation">{</span> padding<span class="token punctuation">:</span> <span class="token number">100</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      Hover Over Me!
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Provider</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span>
+  container
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+              </div>
+            </div>
+            <p>As you can see in the example, the <code class="highlighter-rouge">renderer</code> is used to generate
+              our CSS and class names based on the object of CSS properties being passed-in.</p>
+            <p>The <code class="highlighter-rouge">rule</code> is just a simple anonymous function that returns an
+              object with all of our properties including any properties that may have been passed-in.</p>
+            <p>Because <code class="highlighter-rouge">rule</code> is just a function with a return object, you could
+              expand and include additional logic as you see fit instead of immediately returning the expected object.</p>
+            <h2 id="using-component-primitives"><a class="anchorjs-link " href="#using-component-primitives" aria-label="Anchor"
+                data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Using
+              Component Primitives</h2>
+            <p>While the previous approach works well enough, sometimes it’s nice to create a new component that could
+              easily be reused throughout your project.</p>
+            <p>In those scenarios, we can leverage the <code class="highlighter-rouge">FelaComponent</code> primitive
+              component to create a new component:</p>
+            <div class="language-jsx highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight language-jsx"><code class=" language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> render <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-dom"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createRenderer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"fela"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> FelaComponent<span class="token punctuation">,</span> Provider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-fela"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token function">createRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> rule <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  backgroundColor <span class="token operator">=</span> <span class="token string">"#6db65b"</span><span class="token punctuation">,</span>
+  borderColor <span class="token operator">=</span> <span class="token string">"#efbb35"</span><span class="token punctuation">,</span>
+  padding
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  backgroundColor<span class="token punctuation">:</span> backgroundColor<span class="token punctuation">,</span>
+  border<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`10px solid </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>borderColor<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
+  color<span class="token punctuation">:</span> <span class="token string">"#fff"</span><span class="token punctuation">,</span>
+  fontWeight<span class="token punctuation">:</span> <span class="token string">"bold"</span><span class="token punctuation">,</span>
+  padding<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>padding<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px`</span></span><span class="token punctuation">,</span>
+  <span class="token string">":hover"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    cursor<span class="token punctuation">:</span> <span class="token string">"pointer"</span><span class="token punctuation">,</span>
+    filter<span class="token punctuation">:</span> <span class="token string">"drop-shadow(0 10px 19px rgba(0, 0, 0, 0.3))"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">PaddedContainer</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  backgroundColor<span class="token punctuation">,</span>
+  borderColor<span class="token punctuation">,</span>
+  padding<span class="token punctuation">,</span>
+  children
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">FelaComponent</span></span>
+    <span class="token attr-name">rule</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>rule<span class="token punctuation">}</span></span>
+    <span class="token attr-name">backgroundColor</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>backgroundColor<span class="token punctuation">}</span></span>
+    <span class="token attr-name">borderColor</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>borderColor<span class="token punctuation">}</span></span>
+    <span class="token attr-name">padding</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>padding<span class="token punctuation">}</span></span>
+  <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">FelaComponent</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>container<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Provider</span></span> <span class="token attr-name">renderer</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>renderer<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PaddedContainer</span></span> <span class="token attr-name">padding</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">100</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      Hover Over Me!
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">PaddedContainer</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Provider</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span>
+  container
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+              </div>
+            </div>
+            <p>Utilizing a similar <code class="highlighter-rouge">rule</code>, we are able to create a new <code class="highlighter-rouge">PaddedContainer</code>
+              component that we can pass properties to directly without the overhead and assigning classes via <code
+                class="highlighter-rouge">renderRule</code>.</p>
+            <h2 id="creating-components-yourself"><a class="anchorjs-link " href="#creating-components-yourself"
+                aria-label="Anchor" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Creating
+              Components Yourself</h2>
+            <p>There’s nothing wrong with using primitives to create new components, but you tend to wind up with a bit
+              more boilerplate than you would by creating components directly:</p>
+            <div class="language-javascript highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight language-javascript"><code class=" language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> render <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-dom"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createRenderer <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"fela"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createComponent<span class="token punctuation">,</span> Provider <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react-fela"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> renderer <span class="token operator">=</span> <span class="token function">createRenderer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">rule</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  backgroundColor<span class="token punctuation">,</span>
+  borderColor<span class="token punctuation">,</span>
+  padding
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  backgroundColor<span class="token punctuation">:</span> backgroundColor<span class="token punctuation">,</span>
+  border<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`10px solid </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>borderColor<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
+  color<span class="token punctuation">:</span> <span class="token string">"#fff"</span><span class="token punctuation">,</span>
+  fontWeight<span class="token punctuation">:</span> <span class="token string">"bold"</span><span class="token punctuation">,</span>
+  padding<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>padding<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px`</span></span><span class="token punctuation">,</span>
+  <span class="token string">":hover"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    cursor<span class="token punctuation">:</span> <span class="token string">"pointer"</span><span class="token punctuation">,</span>
+    filter<span class="token punctuation">:</span> <span class="token string">"drop-shadow(0 10px 19px rgba(0, 0, 0, 0.3))"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> AnotherPaddedContainer <span class="token operator">=</span> <span class="token function">createComponent</span><span class="token punctuation">(</span>rule<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> container <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>container<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token operator">&lt;</span>Provider renderer<span class="token operator">=</span><span class="token punctuation">{</span>renderer<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>AnotherPaddedContainer padding<span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">100</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Hover Over Me<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>AnotherPaddedContainer<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>Provider<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  container
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+              </div>
+            </div>
+            <p>A bit cleaner and just as reusable as our example with primitive components!</p>
+            <h2 id="conclusion"><a class="anchorjs-link " href="#conclusion" aria-label="Anchor" data-anchorjs-icon=""
+                style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>Conclusion</h2>
+            <p>Regardless of which approach you take, leveraging <code class="highlighter-rouge">react-fela</code> can
+              speed up the time necessary to dynamically style components in React by eliminating the amount of
+              boilerplate you have to write.</p>
+            <p>To see the code samples above in action, head over to <a href="https://codesandbox.io/s/v02wmproq3">CodeSandbox</a>.</p>
+            <p class="t70 text-center"> Enjoy! 💥</p>
+          </div>
+        </article>
+        <div class="post-meta">
+          <p>Published: October 5, 2018</p>
+        </div>
+        <div class="post-footer text-center t70">
+          <form action="https://www.getrevue.co/profile/alligatorio/add_subscriber" method="post" class="foot-panel newsletter-form"
+            target="_blank" name="revue-form">
+            <h3 class="t20" id="footer-get-newsletter"><span aria-hidden="true">✨💌</span><br>get the<br>weekly
+              newsletter</h3><input aria-labelledby="footer-get-newsletter" name="member[email]" type="email" class="bottom-subscribe"
+              placeholder="you@awesome.com"> <input type="submit" value="Subscribe!" class="small button" name="member[subscribe]">
+          </form>
+          <div class="foot-panel more-posts">
+            <h3 class="t20">more <a href="/react/">react</a></h3>
+            <h4> <a href="/react/geolocation-react-native/"> Using Geolocation in React Native </a></h4>
+            <h4> <a href="/react/react-powerplug/"> Rapid Prototyping Made Easy with React PowerPlug </a></h4>
+            <h4> <a href="/react/reakit/"> Up and Running With Reakit </a></h4>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>
+    <p>All rights reserved</p>
+  </footer>
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
 </html>

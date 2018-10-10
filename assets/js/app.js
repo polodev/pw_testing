@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(2);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
@@ -77,25 +77,13 @@ module.exports = __webpack_require__(2);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Navbar__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Navbar__ = __webpack_require__(2);
 
 
 new __WEBPACK_IMPORTED_MODULE_0__Navbar__["a" /* default */]().init();
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -146,6 +134,12 @@ var Navbar = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["a"] = (Navbar);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
