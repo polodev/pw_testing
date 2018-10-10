@@ -110,7 +110,7 @@ var Navbar = function () {
     key: 'domCached',
     value: function domCached() {
       this.burger = document.getElementById('burger');
-      this.navMenu = document.querySelector('ul.nav-menu');
+      this.navMenu = document.querySelector('div.nav-menu');
     }
   }, {
     key: 'bindEvents',

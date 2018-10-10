@@ -62,5 +62,10 @@ input.algolia__input {
 }
 
 input.algolia__input:focus {
-    width: 180px
+  width: 180px
+}
+@media #{$mobile} {
+  input.algolia__input:focus {
+    width: 145px
+  }
 }

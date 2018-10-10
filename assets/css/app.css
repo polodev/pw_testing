@@ -35,6 +35,40 @@
   --cat-head: rgba(114, 186, 94, 0.1);
   --front-text-color: #93a791;
   --info-box-bg: rgba(255, 213, 70, 0.1);
+  /*mine variable*/
+  --menu-title: 1.5em;
+  --website-font: 16px;
+  --code-font: 1.2em;
+}
+
+@media screen and (max-width: 40em) {
+  :root {
+    --menu-title: 1.2em;
+  }
+}
+
+.big-font {
+  --menu-title: 2em;
+  --code-font: 1.5em;
+  --website-font: 24px;
+}
+
+@media screen and (max-width: 40em) {
+  .big-font {
+    --menu-title: 1.5em;
+  }
+}
+
+.small-font {
+  --menu-title: 1.2em;
+  --website-font: 12px;
+  --code-font: 1em;
+}
+
+@media screen and (max-width: 40em) {
+  .small-font {
+    --menu-title: 1.1em;
+  }
 }
 
 .dark {
@@ -99,10 +133,6 @@
   --info-box-bg: #eee8d5;
 }
 
-html {
-  font-size: 16px;
-}
-
 body {
   background: var(--bg);
   color: var(--text-color);
@@ -113,10 +143,12 @@ body {
   font-weight: 300;
   -webkit-transition: background-color .25s ease-out;
   transition: background-color .25s ease-out;
+  font-size: var(--website-font);
 }
 
 #wrapper {
   max-width: 55rem;
+  font-size: var(--website-font);
   margin: 0 auto;
   padding: 0 .9rem;
 }
@@ -230,11 +262,22 @@ pre {
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.08), 0px 0px 4px rgba(0, 0, 0, 0.05);
 }
 
-code {
-  font-size: 1.2rem;
+h1,
+h2,
+h3,
+h4 {
+  color: var(--green1);
+  margin-top: .4em;
+  margin-bottom: 1em;
+  line-height: 1;
+  font-weight: 200;
 }
 
-@media (max-width: 40em) {
+code {
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 40em) {
   code {
     font-size: 1em;
   }
@@ -475,6 +518,12 @@ input.algolia__input:focus {
   width: 180px;
 }
 
+@media (max-width: 40em) {
+  input.algolia__input:focus {
+    width: 145px;
+  }
+}
+
 .file-desc {
   color: var(--pale-text);
   text-align: right;
@@ -526,6 +575,13 @@ input.algolia__input:focus {
   grid-gap: 20px;
 }
 
+@media screen and (max-width: 40em) {
+  #navigation nav #search-and-menu {
+    grid-gap: 10px;
+    grid-template-columns: auto 26px;
+  }
+}
+
 #navigation nav #search-and-menu a#burger {
   color: #fff;
   font-size: 24px;
@@ -537,9 +593,7 @@ input.algolia__input:focus {
   list-style: none;
 }
 
-#navigation nav ul.nav-menu {
-  margin: 0;
-  padding: 0;
+#navigation nav div.nav-menu {
   position: absolute;
   top: 100%;
   left: 0;
@@ -547,37 +601,61 @@ input.algolia__input:focus {
   background: var(--top2);
 }
 
-#navigation nav ul.nav-menu li {
+#navigation nav div.nav-menu div.nav-menu-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+@media screen and (max-width: 40em) {
+  #navigation nav div.nav-menu div.nav-menu-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner h2 {
+  text-align: center;
+  font-size: var(--menu-title);
+  color: var(--yellow3);
+  margin-top: 1em;
+  margin-bottom: .3em;
+}
+
+#navigation nav div.nav-menu ul.parent-menu {
+  margin: 0;
+  padding: 0;
+}
+
+#navigation nav div.nav-menu li {
   text-align: center;
 }
 
-#navigation nav ul.nav-menu li.has-dropdown > a {
+#navigation nav div.nav-menu li.has-dropdown > a {
   /*border-bottom: 2px solid var(--yellow1);*/
 }
 
-#navigation nav ul.nav-menu li a {
+#navigation nav div.nav-menu li a {
   display: block;
   color: #fff;
   text-decoration: none;
 }
 
-#navigation nav ul.nav-menu li a:hover {
+#navigation nav div.nav-menu li a:hover {
   background: var(--yellow1);
 }
 
-#navigation nav ul.nav-menu li ul.dropdown {
+#navigation nav div.nav-menu li ul.dropdown {
   display: inline-block;
   margin-left: 43px;
   border-left: 2px solid var(--yellow1);
 }
 
-#navigation nav ul.nav-menu li ul.dropdown li {
+#navigation nav div.nav-menu li ul.dropdown li {
   text-align: left;
   position: relative;
   padding-left: 10px;
 }
 
-#navigation nav ul.nav-menu li ul.dropdown li:before {
+#navigation nav div.nav-menu li ul.dropdown li:before {
   position: absolute;
   content: '';
   height: 2px;

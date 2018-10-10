@@ -14,28 +14,60 @@
 
   <div id="navigation">
     <nav>
-      <a id="logo" href="#">Polo Dev</a>
+      <a id="logo" href="#" title="https://polodev.com">
+        <i class="fa fa-laptop-code"></i>
+      </a>
       <div id="search-and-menu">
         <form id="search-form" action="#">
-          <input class='algolia__input' type="text" name="search">
+          <input  class='algolia__input' type="text" name="search">
         </form>
         <div>
           <a id="burger" href="javascript:void(0)"><i class="fa fa-bars"></i>
           </a>
-          <ul class="nav-menu d-none">
-            <li class="has-dropdown"> <a href="#">Course</a>
-              <ul class="dropdown">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">Css</a></li>
-                <li><a href="#">Javascript</a></li>
-                <li><a href="#">Jquery</a></li>
-                <li><a href="#">PHP</a></li>
-              </ul>
-            </li>
-            <li> <a href="#">Series</a> </li>
-            <li> <a href="#">Tutorials</a> </li>
-            <li> <a href="#">Bits</a> </li>
-          </ul>
+          <div class="nav-menu d-none">
+            <div class="nav-menu-inner">
+              <div id="menu-block">
+                <h2>Main menu</h2>
+                <ul class="parent-menu">
+                  <li class="has-dropdown"> <a href="#">Course</a>
+                    <ul class="dropdown">
+                      <li><a href="#">HTML</a></li>
+                      <li><a href="#">Css</a></li>
+                      <li><a href="#">Javascript</a></li>
+                      <li><a href="#">Jquery</a></li>
+                      <li><a href="#">PHP</a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="#">Series</a> </li>
+                  <li> <a href="#">Tutorials</a> </li>
+                  <li> <a href="#">Bits</a> </li>
+                </ul>
+              </div>
+
+              <div class="color-block">
+                <h2>Change Background</h2>
+                <ul>
+                  <li><a href="#">Default</a></li>
+                  <li><a href="#">Dark</a></li>
+                  <li><a href="#">Solarized</a></li>
+                </ul>
+              </div>
+
+              <div class="font-size-block">
+                <h2>Change Font size</h2>
+                <ul>
+                  <li><a href="#">small</a></li>
+                  <li><a href="#">default</a></li>
+                  <li><a href="#">large</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+
+
+
+          </div>
         </div> <!-- end navmenu -->
       </div>
     </nav>

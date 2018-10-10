@@ -1,3 +1,7 @@
+$mobile: "(max-width: 40em)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+
  :root {
   --bg: #fff;
   --bg2: #fafafa;
@@ -34,7 +38,34 @@
   --twitter: #00aced;
   --cat-head: rgba(114, 186, 94, 0.1);
   --front-text-color: #93a791;
-  --info-box-bg: rgba(255, 213, 70, 0.1)
+  --info-box-bg: rgba(255, 213, 70, 0.1);
+
+/*mine variable*/
+  --menu-title: 1.5em;
+  @media screen and #{$mobile} {
+    --menu-title: 1.2em;
+  }
+
+  --website-font: 16px;
+  --code-font: 1.2em;
+}
+
+.big-font {
+  --menu-title: 2em;
+  --code-font: 1.5em;
+  @media screen and #{$mobile} {
+    --menu-title: 1.5em;
+  }
+  --website-font: 24px;
+
+}
+.small-font {
+  --menu-title: 1.2em;
+  @media screen and #{$mobile} {
+    --menu-title: 1.1em;
+  }
+  --website-font: 12px;
+  --code-font: 1em;
 }
 
 .dark {
@@ -99,6 +130,6 @@
     --info-box-bg: #eee8d5;
 }
 
-$mobile: "(max-width: 40em)";
-$tablet: "(min-width: 768px) and (max-width: 1023px)";
-$desktop: "(min-width: 1024px)";
+
+
+

@@ -8,7 +8,7 @@ export default class Navbar {
   }
   domCached() {
     this.burger = document.getElementById('burger')
-    this.navMenu = document.querySelector('ul.nav-menu')
+    this.navMenu = document.querySelector('div.nav-menu')
   }
   bindEvents () {
     this.burger.addEventListener('click', this.toggleNavMenu)

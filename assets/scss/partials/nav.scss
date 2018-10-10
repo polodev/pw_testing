@@ -19,6 +19,10 @@
       display: grid;
       grid-template-columns: auto 30px;
       grid-gap: 20px;
+      @media screen and #{$mobile} {
+        grid-gap: 10px;
+        grid-template-columns: auto 26px;
+      }
       a#burger {
         color: #fff;
         font-size: 24px;
@@ -31,14 +35,30 @@
       list-style: none;
     }
 
-    ul.nav-menu {
-      margin: 0;
-      padding: 0;
+    div.nav-menu {
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       background: var(--top2);
+      div.nav-menu-inner {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        @media screen and #{$mobile} {
+          grid-template-columns: 1fr;
+        }
+        h2 {
+          text-align: center;
+          font-size: var(--menu-title);
+          color: var(--yellow3);
+          margin-top: 1em;
+          margin-bottom: .3em;
+        }
+      }
+      ul.parent-menu {
+        margin: 0;
+        padding: 0;
+      }
       li {
         text-align: center;
         &.has-dropdown {
