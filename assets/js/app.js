@@ -81,15 +81,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ThemeChange__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FontChange__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TopScroll__ = __webpack_require__(12);
+// importing component
 
 
 
 
 
-new __WEBPACK_IMPORTED_MODULE_0__Navbar__["a" /* default */]().init();
-new __WEBPACK_IMPORTED_MODULE_1__ThemeChange__["a" /* default */]().init();
-new __WEBPACK_IMPORTED_MODULE_2__FontChange__["a" /* default */]().init();
-new __WEBPACK_IMPORTED_MODULE_3__TopScroll__["a" /* default */]().init();
+// instantiating component
+// those component is not pure. its modified dom directly
+// but I am getting benefit by ::divsion of work::
+new __WEBPACK_IMPORTED_MODULE_0__Navbar__["a" /* default */]();
+new __WEBPACK_IMPORTED_MODULE_1__ThemeChange__["a" /* default */]();
+new __WEBPACK_IMPORTED_MODULE_2__FontChange__["a" /* default */]();
+new __WEBPACK_IMPORTED_MODULE_3__TopScroll__["a" /* default */]();
 
 /***/ }),
 /* 2 */
@@ -113,6 +117,7 @@ var Navbar = function () {
     _classCallCheck(this, Navbar);
 
     this.toggleNavMenu = this.toggleNavMenu.bind(this);
+    this.init();
   }
 
   _createClass(Navbar, [{
@@ -172,7 +177,6 @@ var ThemeChange = function () {
       this.domCached();
       this.bindEvents();
       this.settingThemeOnPageLoad();
-      console.log('calling from themechange');
     }
   }, {
     key: "settingThemeOnPageLoad",
@@ -198,6 +202,7 @@ var ThemeChange = function () {
     this.switchToLight = this.switchToLight.bind(this);
     this.switchToDark = this.switchToDark.bind(this);
     this.switchToSolarized = this.switchToSolarized.bind(this);
+    this.init();
   }
 
   _createClass(ThemeChange, [{
@@ -297,6 +302,7 @@ var FontChange = function () {
     this.switchToDefault = this.switchToDefault.bind(this);
     this.switchToLarge = this.switchToLarge.bind(this);
     this.switchToSmall = this.switchToSmall.bind(this);
+    this.init();
   }
 
   _createClass(FontChange, [{
@@ -377,6 +383,7 @@ var TopScroll = function () {
     _classCallCheck(this, TopScroll);
 
     this.showTopButtonNProgress = this.showTopButtonNProgress.bind(this);
+    this.init();
   }
 
   _createClass(TopScroll, [{
@@ -398,15 +405,18 @@ var TopScroll = function () {
       document.addEventListener('scroll', this.showTopButtonNProgress, { passive: true });
     }
   }, {
-    key: 'showTopButtonNProgress',
-    value: function showTopButtonNProgress() {
-      var scroll = (this.de.scrollTop || this.bd.scrollTop) / ((this.de.scrollHeight || this.bd.scrollHeight) - this.de.clientHeight) * 100;
-
+    key: 'debug',
+    value: function debug() {
       console.log('this.de.scrollTop', this.de.scrollTop);
       console.log('this.bd.scrollTop', this.bd.scrollTop);
       console.log('this.de.scrollHeight', this.de.scrollHeight);
       console.log('this.bd.scrollHeight', this.bd.scrollHeight);
       console.log('this.de.clientHeight', this.de.clientHeight);
+    }
+  }, {
+    key: 'showTopButtonNProgress',
+    value: function showTopButtonNProgress() {
+      var scroll = (this.de.scrollTop || this.bd.scrollTop) / ((this.de.scrollHeight || this.bd.scrollHeight) - this.de.clientHeight) * 100;
 
       this.progress.style.setProperty("--scroll", scroll + '%');
 

@@ -22,6 +22,7 @@ export default class FontChange {
     this.switchToDefault = this.switchToDefault.bind(this)
     this.switchToLarge = this.switchToLarge.bind(this)
     this.switchToSmall = this.switchToSmall.bind(this)
+    this.init();
 
   }
   domCached () {

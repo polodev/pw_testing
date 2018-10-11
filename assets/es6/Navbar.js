@@ -5,6 +5,7 @@ export default class Navbar {
   }
   constructor() {
     this.toggleNavMenu = this.toggleNavMenu.bind(this)
+    this.init();
   }
   domCached() {
     this.burger = document.getElementById('burger')

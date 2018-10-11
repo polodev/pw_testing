@@ -3,7 +3,6 @@ export default class ThemeChange {
     this.domCached()
     this.bindEvents()
     this.settingThemeOnPageLoad()
-    console.log('calling from themechange')
   }
   settingThemeOnPageLoad () {
     if (localStorage.getItem("theme")) {
@@ -23,7 +22,7 @@ export default class ThemeChange {
     this.switchToLight = this.switchToLight.bind(this)
     this.switchToDark = this.switchToDark.bind(this)
     this.switchToSolarized = this.switchToSolarized.bind(this)
-
+    this.init();
   }
   domCached () {
     this.lightThemeSelector = document.querySelector('.light-theme-selector')

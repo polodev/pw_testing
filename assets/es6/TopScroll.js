@@ -5,6 +5,7 @@ export default class TopScroll {
   }
   constructor () {
     this.showTopButtonNProgress = this.showTopButtonNProgress.bind(this)
+    this.init();
   }
   domCached () {
     this.topBtn = document.querySelector(".top");
@@ -18,15 +19,16 @@ export default class TopScroll {
     }
     document.addEventListener('scroll', this.showTopButtonNProgress, {passive: true})
   }
+  debug () {
+    console.log('this.de.scrollTop', this.de.scrollTop)
+    console.log('this.bd.scrollTop', this.bd.scrollTop)
+    console.log('this.de.scrollHeight', this.de.scrollHeight)
+    console.log('this.bd.scrollHeight', this.bd.scrollHeight)
+    console.log('this.de.clientHeight', this.de.clientHeight)
+  }
   showTopButtonNProgress () {
       let scroll = (this.de.scrollTop || this.bd.scrollTop) /
                     ( (this.de.scrollHeight || this.bd.scrollHeight) - this.de.clientHeight ) * 100;
-
-                    console.log('this.de.scrollTop', this.de.scrollTop)
-                    console.log('this.bd.scrollTop', this.bd.scrollTop)
-                    console.log('this.de.scrollHeight', this.de.scrollHeight)
-                    console.log('this.bd.scrollHeight', this.bd.scrollHeight)
-                    console.log('this.de.clientHeight', this.de.clientHeight)
 
       this.progress.style.setProperty("--scroll", `${scroll}%`);
 
