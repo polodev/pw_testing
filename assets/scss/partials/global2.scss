@@ -96,6 +96,11 @@ div a.button:hover {
     height: 4px;
     z-index: 3;
 }
+.dark {
+  .progress {
+    background: linear-gradient(to right, var(--subtle-yellow1) var(--scroll), transparent 0);
+  }
+}
 div.top:hover {
     opacity: 1;
 }
