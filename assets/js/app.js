@@ -80,6 +80,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Navbar__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ThemeChange__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FontChange__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TopScroll__ = __webpack_require__(12);
+
 
 
 
@@ -87,6 +89,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 new __WEBPACK_IMPORTED_MODULE_0__Navbar__["a" /* default */]().init();
 new __WEBPACK_IMPORTED_MODULE_1__ThemeChange__["a" /* default */]().init();
 new __WEBPACK_IMPORTED_MODULE_2__FontChange__["a" /* default */]().init();
+new __WEBPACK_IMPORTED_MODULE_3__TopScroll__["a" /* default */]().init();
 
 /***/ }),
 /* 2 */
@@ -351,6 +354,74 @@ var FontChange = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["a"] = (FontChange);
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TopScroll = function () {
+  _createClass(TopScroll, [{
+    key: 'init',
+    value: function init() {
+      this.domCached();
+      this.bindEvents();
+    }
+  }]);
+
+  function TopScroll() {
+    _classCallCheck(this, TopScroll);
+
+    this.showTopButtonNProgress = this.showTopButtonNProgress.bind(this);
+  }
+
+  _createClass(TopScroll, [{
+    key: 'domCached',
+    value: function domCached() {
+      this.topBtn = document.querySelector(".top");
+      this.de = document.documentElement;
+      this.bd = document.body;
+      this.progress = document.querySelector('.progress');
+    }
+  }, {
+    key: 'bindEvents',
+    value: function bindEvents() {
+      if (this.topBtn) {
+        this.topBtn.addEventListener('click', function () {
+          return window.scrollTo(0, 0);
+        });
+      }
+      document.addEventListener('scroll', this.showTopButtonNProgress, { passive: true });
+    }
+  }, {
+    key: 'showTopButtonNProgress',
+    value: function showTopButtonNProgress() {
+      var scroll = (this.de.scrollTop || this.bd.scrollTop) / ((this.de.scrollHeight || this.bd.scrollHeight) - this.de.clientHeight) * 100;
+
+      console.log('this.de.scrollTop', this.de.scrollTop);
+      console.log('this.bd.scrollTop', this.bd.scrollTop);
+      console.log('this.de.scrollHeight', this.de.scrollHeight);
+      console.log('this.bd.scrollHeight', this.bd.scrollHeight);
+      console.log('this.de.clientHeight', this.de.clientHeight);
+
+      this.progress.style.setProperty("--scroll", scroll + '%');
+
+      if (this.topBtn && !this.topBtn.classList.contains("top-active") && window.scrollY >= 1500) {
+        this.topBtn.classList.add("top-active");
+      } else if (this.topBtn && this.topBtn.classList.contains("top-active") && window.scrollY < 1500) {
+        this.topBtn.classList.remove("top-active");
+      }
+    }
+  }]);
+
+  return TopScroll;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (TopScroll);
 
 /***/ })
 /******/ ]);
