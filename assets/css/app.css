@@ -560,6 +560,7 @@ input.algolia__input:focus {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  padding: 0 .9rem;
 }
 
 #navigation nav a#logo {
@@ -599,11 +600,15 @@ input.algolia__input:focus {
   left: 0;
   width: 100%;
   background: var(--top2);
+  padding-right: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #navigation nav div.nav-menu div.nav-menu-inner {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
+  grid-column-gap: 15px;
 }
 
 @media screen and (max-width: 40em) {
@@ -621,29 +626,42 @@ input.algolia__input:focus {
   margin-bottom: .3em;
 }
 
-#navigation nav div.nav-menu div.nav-menu-inner .theme-block {
-  /*      li {
-            display: inline-block;
-            a {
-              position: relative;
-              display: inline-block;
-              &:before {
-                position: absolute;
-                left: 0;
-                content: ' ';
-                background: var(--bg);
-                border: 2px solid var(--yellow1);
-                border-radius: 50%;
-                box-shadow: 0 0 5px var(--subtle);
-                width: 1.5rem;
-                height: 1.5rem;
-                display: inline-block;
-                vertical-align: middle;
-                margin-top: -3px;
-              }
-            }
-          }
-    */
+#navigation nav div.nav-menu div.nav-menu-inner .font-size-block ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 10px;
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .font-size-block li {
+  display: inline-block;
+  position: relative;
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .font-size-block li.active {
+  background: var(--yellow1);
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .font-size-block li:before {
+  position: absolute;
+  content: 'A';
+  display: inline-block;
+  color: var(--yellow1);
+  font-size: 16px;
+  top: 2px;
+  left: 10px;
+  background: var(--bg3);
+  padding: 1px 5px;
+  font-weight: bold;
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .font-size-block li.large-font-selector:before {
+  font-size: 24px;
+  top: 0;
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .font-size-block li.small-font-selector:before {
+  font-size: 12px;
+  top: 4;
 }
 
 #navigation nav div.nav-menu div.nav-menu-inner .theme-block ul {

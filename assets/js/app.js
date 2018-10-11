@@ -79,11 +79,14 @@ module.exports = __webpack_require__(3);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Navbar__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ThemeChange__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FontChange__ = __webpack_require__(11);
+
 
 
 
 new __WEBPACK_IMPORTED_MODULE_0__Navbar__["a" /* default */]().init();
 new __WEBPACK_IMPORTED_MODULE_1__ThemeChange__["a" /* default */]().init();
+new __WEBPACK_IMPORTED_MODULE_2__FontChange__["a" /* default */]().init();
 
 /***/ }),
 /* 2 */
@@ -249,6 +252,105 @@ var ThemeChange = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["a"] = (ThemeChange);
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var FontChange = function () {
+  _createClass(FontChange, [{
+    key: "init",
+    value: function init() {
+      this.domCached();
+      this.bindEvents();
+      this.settingFontOnPageLoad();
+    }
+  }, {
+    key: "settingFontOnPageLoad",
+    value: function settingFontOnPageLoad() {
+      if (localStorage.getItem("fontsize")) {
+        var fontsize = localStorage.getItem("fontsize");
+        document.body.classList.add(fontsize);
+        switch (fontsize) {
+          case 'large-font':
+            this.settingActiveClass(this.largeFontSelector);
+            break;
+          case 'small-font':
+            this.settingActiveClass(this.smallFontSelector);
+            break;
+        }
+      }
+    }
+  }]);
+
+  function FontChange() {
+    _classCallCheck(this, FontChange);
+
+    this.switchToDefault = this.switchToDefault.bind(this);
+    this.switchToLarge = this.switchToLarge.bind(this);
+    this.switchToSmall = this.switchToSmall.bind(this);
+  }
+
+  _createClass(FontChange, [{
+    key: "domCached",
+    value: function domCached() {
+      this.defaultFontSelector = document.querySelector('.default-font-selector');
+      this.largeFontSelector = document.querySelector('.large-font-selector');
+      this.smallFontSelector = document.querySelector('.small-font-selector');
+    }
+  }, {
+    key: "bindEvents",
+    value: function bindEvents() {
+      this.defaultFontSelector.addEventListener('click', this.switchToDefault);
+      this.largeFontSelector.addEventListener('click', this.switchToLarge);
+      this.smallFontSelector.addEventListener('click', this.switchToSmall);
+    }
+  }, {
+    key: "settingActiveClass",
+    value: function settingActiveClass(activeSelector) {
+      this.defaultFontSelector.classList.remove('active');
+      this.smallFontSelector.classList.remove('active');
+      this.largeFontSelector.classList.remove('active');
+      activeSelector.classList.add('active');
+    }
+  }, {
+    key: "switchToDefault",
+    value: function switchToDefault(e) {
+      e.preventDefault();
+      document.body.classList.remove('large-font');
+      document.body.classList.remove('small-font');
+      this.settingActiveClass(this.defaultFontSelector);
+      localStorage.removeItem("fontsize");
+    }
+  }, {
+    key: "switchToSmall",
+    value: function switchToSmall(e) {
+      e.preventDefault();
+      document.body.classList.add("small-font");
+      document.body.classList.remove("large-font");
+      this.settingActiveClass(this.smallFontSelector);
+      localStorage.setItem("fontsize", "small-font");
+    }
+  }, {
+    key: "switchToLarge",
+    value: function switchToLarge(e) {
+      e.preventDefault();
+      document.body.classList.add("large-font");
+      document.body.classList.remove("small-font");
+      this.settingActiveClass(this.largeFontSelector);
+      localStorage.setItem("fontsize", "large-font");
+    }
+  }]);
+
+  return FontChange;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (FontChange);
 
 /***/ })
 /******/ ]);

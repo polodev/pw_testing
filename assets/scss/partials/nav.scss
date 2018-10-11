@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 0 .9rem;
     a#logo {
       margin-left: 20px;
       color: #fff;
@@ -41,9 +42,12 @@
       left: 0;
       width: 100%;
       background: var(--top2);
+      padding-right: 1em;
+      box-sizing: border-box;
       div.nav-menu-inner {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
+        grid-column-gap: 15px;
         @media screen and #{$mobile} {
           grid-template-columns: 1fr;
         }
@@ -55,6 +59,44 @@
           margin-top: 1em;
           margin-bottom: .3em;
         }
+        .font-size-block {
+          ul {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 10px;
+          }
+          li {
+            display: inline-block;
+            position: relative;
+            &.active {
+              background: var(--yellow1);
+            }
+            &:before {
+              position: absolute;
+              content: 'A';
+              display: inline-block;
+              color: var(--yellow1);
+              font-size: 16px;
+              top: 2px;
+              left: 10px;
+              background: var(--bg3);
+              padding: 1px 5px;
+              font-weight: bold;
+            }
+          }
+          li.large-font-selector {
+            &:before {
+              font-size: 24px;
+              top: 0;
+            }
+          }
+          li.small-font-selector{
+            &:before {
+              font-size: 12px;
+              top: 4;
+            }
+          }
+       }
 
         .theme-block {
           ul {
@@ -99,28 +141,7 @@
               background: #fdf6e3;
             }
           }
-    /*      li {
-            display: inline-block;
-            a {
-              position: relative;
-              display: inline-block;
-              &:before {
-                position: absolute;
-                left: 0;
-                content: ' ';
-                background: var(--bg);
-                border: 2px solid var(--yellow1);
-                border-radius: 50%;
-                box-shadow: 0 0 5px var(--subtle);
-                width: 1.5rem;
-                height: 1.5rem;
-                display: inline-block;
-                vertical-align: middle;
-                margin-top: -3px;
-              }
-            }
-          }
-    */    }
+       }
       }
       ul.parent-menu {
         margin: 0;
