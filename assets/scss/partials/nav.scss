@@ -50,10 +50,77 @@
         h2 {
           text-align: center;
           font-size: var(--menu-title);
+          font-weight: bold;
           color: var(--yellow3);
           margin-top: 1em;
           margin-bottom: .3em;
         }
+
+        .theme-block {
+          ul {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 10px;
+          }
+          li {
+            display: inline-block;
+            position: relative;
+            &.active {
+              background: var(--yellow1);
+            }
+            &:before {
+              position: absolute;
+              left: 10px;
+              top: 6px;
+              content: ' ';
+              border-radius: 50%;
+              width: 1.2em;
+              height: 1.2em;
+              display: inline-block;
+              vertical-align: middle;
+              margin-top: -3px;
+              border: 2px solid var(--yellow1);
+              box-shadow: 0 0 5px var(--subtle);
+            }
+          }
+          li.light-theme-selector {
+            &:before {
+              background: #fff;
+              border: 2px solid #6db65b;
+            }
+          }
+          li.dark-theme-selector {
+            &:before {
+              background: #222831;
+            }
+          }
+          li.solarized-theme-selector {
+            &:before {
+              background: #fdf6e3;
+            }
+          }
+    /*      li {
+            display: inline-block;
+            a {
+              position: relative;
+              display: inline-block;
+              &:before {
+                position: absolute;
+                left: 0;
+                content: ' ';
+                background: var(--bg);
+                border: 2px solid var(--yellow1);
+                border-radius: 50%;
+                box-shadow: 0 0 5px var(--subtle);
+                width: 1.5rem;
+                height: 1.5rem;
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: -3px;
+              }
+            }
+          }
+    */    }
       }
       ul.parent-menu {
         margin: 0;
@@ -68,10 +135,13 @@
         }
         a {
           display: block;
+          text-transform: capitalize;
           color: #fff;
           text-decoration: none;
+          font-size: 1.2em;
           &:hover {
             background: var(--yellow1);
+            font-weight: bold;
           }
         }
         ul.dropdown {
@@ -101,6 +171,11 @@
 
     form#search-form {
 
+    }
+    .font-size-block {
+      li {
+
+      }
     }
   }
 }

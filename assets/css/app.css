@@ -47,14 +47,14 @@
   }
 }
 
-.big-font {
+.large-font {
   --menu-title: 2em;
   --code-font: 1.5em;
   --website-font: 24px;
 }
 
 @media screen and (max-width: 40em) {
-  .big-font {
+  .large-font {
     --menu-title: 1.5em;
   }
 }
@@ -615,9 +615,79 @@ input.algolia__input:focus {
 #navigation nav div.nav-menu div.nav-menu-inner h2 {
   text-align: center;
   font-size: var(--menu-title);
+  font-weight: bold;
   color: var(--yellow3);
   margin-top: 1em;
   margin-bottom: .3em;
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .theme-block {
+  /*      li {
+            display: inline-block;
+            a {
+              position: relative;
+              display: inline-block;
+              &:before {
+                position: absolute;
+                left: 0;
+                content: ' ';
+                background: var(--bg);
+                border: 2px solid var(--yellow1);
+                border-radius: 50%;
+                box-shadow: 0 0 5px var(--subtle);
+                width: 1.5rem;
+                height: 1.5rem;
+                display: inline-block;
+                vertical-align: middle;
+                margin-top: -3px;
+              }
+            }
+          }
+    */
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .theme-block ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 10px;
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .theme-block li {
+  display: inline-block;
+  position: relative;
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .theme-block li.active {
+  background: var(--yellow1);
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .theme-block li:before {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  content: ' ';
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -3px;
+  border: 2px solid var(--yellow1);
+  -webkit-box-shadow: 0 0 5px var(--subtle);
+          box-shadow: 0 0 5px var(--subtle);
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .theme-block li.light-theme-selector:before {
+  background: #fff;
+  border: 2px solid #6db65b;
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .theme-block li.dark-theme-selector:before {
+  background: #222831;
+}
+
+#navigation nav div.nav-menu div.nav-menu-inner .theme-block li.solarized-theme-selector:before {
+  background: #fdf6e3;
 }
 
 #navigation nav div.nav-menu ul.parent-menu {
@@ -635,12 +705,15 @@ input.algolia__input:focus {
 
 #navigation nav div.nav-menu li a {
   display: block;
+  text-transform: capitalize;
   color: #fff;
   text-decoration: none;
+  font-size: 1.2em;
 }
 
 #navigation nav div.nav-menu li a:hover {
   background: var(--yellow1);
+  font-weight: bold;
 }
 
 #navigation nav div.nav-menu li ul.dropdown {

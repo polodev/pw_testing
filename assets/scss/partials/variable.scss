@@ -50,7 +50,7 @@ $desktop: "(min-width: 1024px)";
   --code-font: 1.2em;
 }
 
-.big-font {
+.large-font {
   --menu-title: 2em;
   --code-font: 1.5em;
   @media screen and #{$mobile} {

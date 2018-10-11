@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./assets/css/app.css">
 </head>
 
-<body class="solarized">
+<body>
 
   <div id="navigation">
     <nav>
@@ -24,7 +24,7 @@
         <div>
           <a id="burger" href="javascript:void(0)"><i class="fa fa-bars"></i>
           </a>
-          <div class="nav-menu d-none">
+          <div class="nav-menu d-block">
             <div class="nav-menu-inner">
               <div id="menu-block">
                 <h2>Main menu</h2>
@@ -44,21 +44,21 @@
                 </ul>
               </div>
 
-              <div class="color-block">
-                <h2>Change Background</h2>
+              <div class="theme-block">
+                <h2>Change theme</h2>
                 <ul>
-                  <li><a href="#">Default</a></li>
-                  <li><a href="#">Dark</a></li>
-                  <li><a href="#">Solarized</a></li>
+                  <li class="light-theme-selector active"><a href="#">Light</a></li>
+                  <li class="dark-theme-selector"><a href="#">Dark</a></li>
+                  <li class="solarized-theme-selector"><a href="#">Solarized</a></li>
                 </ul>
               </div>
 
               <div class="font-size-block">
                 <h2>Change Font size</h2>
                 <ul>
-                  <li><a href="#">small</a></li>
-                  <li><a href="#">default</a></li>
-                  <li><a href="#">large</a></li>
+                  <li class="small-font-selector font-selector"><a href="#">small</a></li>
+                  <li class="default-font-selector font-selector"><a href="#">default</a></li>
+                  <li class="large-font-selector font-selector"><a href="#">large</a></li>
                 </ul>
               </div>
 
