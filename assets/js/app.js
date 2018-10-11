@@ -221,6 +221,7 @@ var ThemeChange = function () {
     value: function switchToLight(e) {
       e.preventDefault();
       document.body.classList.remove('dark');
+      document.body.classList.remove('solarized');
       this.settingActiveClass(this.lightThemeSelector);
       localStorage.removeItem("theme");
     }
