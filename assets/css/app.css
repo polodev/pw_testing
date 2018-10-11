@@ -603,6 +603,7 @@ input.algolia__input:focus {
   padding-right: 1em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding-bottom: 20px;
 }
 
 #navigation nav div.nav-menu div.nav-menu-inner {
@@ -626,6 +627,10 @@ input.algolia__input:focus {
   margin-bottom: .3em;
 }
 
+#navigation nav div.nav-menu div.nav-menu-inner li.active {
+  background: var(--subtle);
+}
+
 #navigation nav div.nav-menu div.nav-menu-inner .font-size-block ul {
   display: grid;
   grid-template-columns: 1fr;
@@ -635,10 +640,6 @@ input.algolia__input:focus {
 #navigation nav div.nav-menu div.nav-menu-inner .font-size-block li {
   display: inline-block;
   position: relative;
-}
-
-#navigation nav div.nav-menu div.nav-menu-inner .font-size-block li.active {
-  background: var(--yellow1);
 }
 
 #navigation nav div.nav-menu div.nav-menu-inner .font-size-block li:before {
@@ -673,10 +674,6 @@ input.algolia__input:focus {
 #navigation nav div.nav-menu div.nav-menu-inner .theme-block li {
   display: inline-block;
   position: relative;
-}
-
-#navigation nav div.nav-menu div.nav-menu-inner .theme-block li.active {
-  background: var(--yellow1);
 }
 
 #navigation nav div.nav-menu div.nav-menu-inner .theme-block li:before {
