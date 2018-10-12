@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(3);
+module.exports = __webpack_require__(6);
 
 
 /***/ }),
@@ -78,10 +78,12 @@ module.exports = __webpack_require__(3);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Navbar__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ThemeChange__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FontChange__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TopScroll__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ThemeChange__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FontChange__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__TopScroll__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Toc__ = __webpack_require__(13);
 // importing component
+
 
 
 
@@ -94,6 +96,7 @@ new __WEBPACK_IMPORTED_MODULE_0__Navbar__["a" /* default */]();
 new __WEBPACK_IMPORTED_MODULE_1__ThemeChange__["a" /* default */]();
 new __WEBPACK_IMPORTED_MODULE_2__FontChange__["a" /* default */]();
 new __WEBPACK_IMPORTED_MODULE_3__TopScroll__["a" /* default */]();
+new __WEBPACK_IMPORTED_MODULE_4__Toc__["a" /* default */]();
 
 /***/ }),
 /* 2 */
@@ -151,18 +154,6 @@ var Navbar = function () {
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -262,7 +253,7 @@ var ThemeChange = function () {
 /* harmony default export */ __webpack_exports__["a"] = (ThemeChange);
 
 /***/ }),
-/* 11 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -362,7 +353,7 @@ var FontChange = function () {
 /* harmony default export */ __webpack_exports__["a"] = (FontChange);
 
 /***/ }),
-/* 12 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -432,6 +423,74 @@ var TopScroll = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["a"] = (TopScroll);
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Toc = function () {
+  _createClass(Toc, [{
+    key: 'init',
+    value: function init() {
+      this.domCached();
+      this.bindEvents();
+    }
+  }]);
+
+  function Toc() {
+    _classCallCheck(this, Toc);
+
+    this.toggleContent = this.toggleContent.bind(this);
+    this.init();
+  }
+
+  _createClass(Toc, [{
+    key: 'domCached',
+    value: function domCached() {
+      this.tocSpan = document.getElementById('toc_toggle_span');
+      this.tocContent = document.getElementById('toc_content');
+    }
+  }, {
+    key: 'toggleContent',
+    value: function toggleContent() {
+      if (this.tocContent.classList.contains('d-none')) {
+        this.tocContent.classList.remove('d-none');
+        this.tocSpan.innerText = '[Hide]';
+      } else {
+        this.tocContent.classList.add('d-none');
+        this.tocSpan.innerText = '[Show]';
+      }
+    }
+  }, {
+    key: 'bindEvents',
+    value: function bindEvents() {
+      if (this.tocSpan) {
+        this.tocSpan.addEventListener('click', this.toggleContent);
+      }
+    }
+  }]);
+
+  return Toc;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (Toc);
 
 /***/ })
 /******/ ]);

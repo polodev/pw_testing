@@ -25,7 +25,7 @@
         <div>
           <a id="burger" href="javascript:void(0)"><i class="fa fa-bars"></i>
           </a>
-          <div class="nav-menu d-block">
+          <div class="nav-menu d-none">
             <div class="nav-menu-inner">
               <div id="menu-block">
                 <h2>Main menu</h2>
@@ -64,16 +64,76 @@
               </div>
 
             </div>
-
-
-
-
           </div>
         </div> <!-- end navmenu -->
       </div>
     </nav>
   </div>
   <div id="wrapper">
+    <div class="toc">
+      <h2>
+        Table of Contents
+        <span id="toc_toggle_span">[hide]</span>
+      </h2>
+      <div id="toc_content">
+        <nav id="TableOfContents">
+          <ul>
+            <li><a href="#1-basic-syntax">1 - Basic syntax</a></li>
+            <li><a href="#2-the-document-ready-event">2 - The Document Ready Event</a></li>
+            <li><a href="#3-selects-the-first-li-element-of-the-first-ul">3 - Selects the first <code>&lt;li&gt;</code> element of the first <code>&lt;ul&gt;</code></a></li>
+            <li><a href="#4-selects-the-first-li-element-of-every-ul">4 - Selects the first <code>&lt;li&gt;</code> element of every <code>&lt;ul&gt;</code></a></li>
+            <li><a href="#5-selects-all-a-elements-with-a-target-attribute-value-equal-to-blank">5 - Selects all <code>&lt;a&gt;</code> elements with a target attribute value equal to <code>"_blank"</code></a></li>
+            <li><a href="#6-selects-all-a-elements-with-a-target-attribute-value-not-equal-to-blank">6 - Selects all <code>&lt;a&gt;</code> elements with a target attribute value NOT equal to <code>"_blank"</code></a></li>
+            <li><a href="#6-selects-all-button-elements-and-input-elements-of-type-button">6 - Selects all <code>&lt;button&gt;</code> elements and <code>&lt;input&gt;</code> elements of <code>type="button"</code></a></li>
+            <li><a href="#7-mouse-events">7 - Mouse Events</a></li>
+            <li><a href="#8-keyboard-events">8 - Keyboard Events</a></li>
+            <li><a href="#9-form-events">9 - Form Events</a></li>
+            <li><a href="#10-document-window-events">10 - Document/Window Events</a></li>
+            <li><a href="#11-click-method">11 - Click method</a></li>
+            <li><a href="#12-the-on-method">12 - The on() Method</a></li>
+            <li><a href="#13-multiple-event-handlers-to-a-single-element">13 - multiple event handlers to a single element:</a></li>
+            <li><a href="#14-hide-in-jquery">14 - hide in jquery</a></li>
+            <li><a href="#15-show-in-jquery">15 - show in jquery</a></li>
+            <li><a href="#16-jquery-toggle">16 - jQuery toggle()</a></li>
+            <li><a href="#17-jquery-fade-method">17 - jquery fade method</a></li>
+            <li><a href="#18-jquery-effects-sliding">18 - jQuery Effects - Sliding</a></li>
+            <li><a href="#19-jquery-animations-the-animate-method">19 - jQuery Animations - The animate() Method</a></li>
+            <li><a href="#20-jquery-animate-method-with-relative-value">20 - jQuery animate() method with relative value <code>+=</code></a></li>
+            <li><a href="#21-jquery-animate-using-pre-defined-values">21 - jQuery animate() - Using Pre-defined Values</a></li>
+            <li><a href="#22-jquery-animate-uses-queue-functionality">22 - jQuery animate() - Uses Queue Functionality</a></li>
+            <li><a href="#23-jquery-stop-method">23 - jQuery stop() Method</a></li>
+            <li><a href="#24-jquery-method-chaining">24 - jQuery Method Chaining</a></li>
+            <li><a href="#24-get-content-from-html-page">24 - Get Content from HTML page</a></li>
+            <li><a href="#25-how-to-get-content-with-the-jquery-text-and-html-methods">25 - how to get content with the jQuery text() and html() methods</a></li>
+            <li><a href="#26-how-to-get-the-value-of-an-input-field-with-the-jquery-val">26 - how to get the value of an input field with the jQuery val()</a></li>
+            <li><a href="#27-get-attributes-attr">27 - Get Attributes - attr()</a></li>
+            <li><a href="#28-set-content-text-html-and-val">28 - Set Content - text(), html(), and val()</a></li>
+            <li><a href="#29-a-callback-function-for-text-html-and-val">29 - A Callback Function for text(), html(), and val()</a></li>
+            <li><a href="#30-set-attributes-attr">30 - Set Attributes - attr()</a></li>
+            <li><a href="#31-a-callback-function-for-attr">31 - A Callback Function for attr()</a></li>
+            <li><a href="#32-add-elements">32 -  Add Elements</a></li>
+            <li><a href="#33-remove-elements">33 - Remove Elements</a></li>
+            <li><a href="#34-jquery-manipulating-css">34 - jQuery Manipulating CSS</a></li>
+            <li><a href="#35-jquery-css">35 - jQuery - css()</a></li>
+            <li><a href="#36-set-multiple-css-properties">36 - Set Multiple CSS Properties</a></li>
+            <li><a href="#37-jquery-dimension-methods">37 - jQuery Dimension Methods</a></li>
+            <li><a href="#38-jquery-width-and-height-method">38 - jquery width and height method</a></li>
+            <li><a href="#39-jquery-innerwidth-and-innerheight-methods">39 - jQuery innerWidth() and innerHeight() Methods</a></li>
+            <li><a href="#40-jquery-outerwidth-and-outerheight-methods">40 - jQuery outerWidth() and outerHeight() Methods</a></li>
+            <li><a href="#41-document-and-window-width">41 - document and window width</a></li>
+            <li><a href="#42-sets-the-width-and-height-of-a-specified-div-element">42 - sets the width and height of a specified <code>&lt;div&gt;</code> element:</a></li>
+            <li><a href="#43-what-is-traversing">43 - What is Traversing?</a></li>
+            <li><a href="#44-jquery-traversing-ancestors">44 - jQuery Traversing - Ancestors</a></li>
+            <li><a href="#45-jquery-parent">45 - jQuery parent()</a></li>
+            <li><a href="#46-jquery-parents-method">46 - jQuery parents() Method</a></li>
+            <li><a href="#47-jquery-parentsuntil-method">47 - jQuery parentsUntil() Method</a></li>
+            <li><a href="#48-jquery-traversing-descendants">48 - jQuery Traversing - Descendants</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
     <main>
       <h1>This is the main content h1 header</h1>
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto neque fugiat voluptatem rerum quaerat ea
